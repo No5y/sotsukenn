@@ -2,11 +2,13 @@
 inview
 ===========*/
 
-.fadeIn {
+.fadeIn_left {
   opacity: 0;
+  transform: translate(-50%, 0);
   transition: 2s;
 }
-.fadeIn.is-show {
+.fadeIn_left.is-show {
+  transform: translate(0, 0);
   opacity: 1;
 }
 
@@ -85,11 +87,3 @@ body {
   transform: rotate(45deg);
   margin-right: 10px;
 }
-
-
-
-
-
-
-
-Resources
