@@ -25,3 +25,14 @@ var bar = new ProgressBar.Line(splash_text, {//id名を指定
 bar.animate(1.0, function () {//バーを描画する割合を指定します 1.0 なら100%まで描画します
   $("#splash").delay(500).fadeOut(800);//アニメーションが終わったら#splashエリアをフェードアウト
 });  
+
+/*①クリック時に実行する関数*/
+function clickListener (e) {
+  /*クリックした要素のIDを表示*/
+  alert( e.target.getAttribute("id") + "をクリックしました" )
+}
+/*②IMG要素を全てセレクト*/
+document.querySelectorAll("img").forEach((imgElm) => {
+  /*③要素のクリックイベントにイベントリスナーを紐づける*/
+  imgElm.addEventListener('click', clickListener);
+})
